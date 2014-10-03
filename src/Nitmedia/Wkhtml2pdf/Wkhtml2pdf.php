@@ -802,6 +802,8 @@ class Wkhtml2pdf
         $command = '';
         $command = $this->getBin();
 
+        $command .= " --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 ";
+        
         $command .= " --orientation " . escapeshellarg($this->getOrientation());
         $command .= " --page-size " . escapeshellarg($this->getPageSize());
         $command .= ($this->getTOC()) ? " --toc" : "";
